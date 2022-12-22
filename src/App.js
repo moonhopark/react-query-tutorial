@@ -10,6 +10,7 @@ import ParallelQueriesPage from './components/ParallelQueries.page';
 import DynamicParallelQueriesPage from './components/DynamicParallel.page';
 import './App.css';
 import DependentQueriesPage from './components/DependentQueries.page';
+import PaginatedQueriesPage from './components/PaginatedQueries.page';
 
 const queryClient = new QueryClient();
 
@@ -38,9 +39,14 @@ function App() {
               <li>
                 <Link to="/rq-dependent">Dependent</Link>
               </li>
+              <li>
+                <Link to="/rq-paginated">Paginated</Link>
+              </li>
             </ul>
           </nav>
           <Routes>
+            <Route path="/rq-paginated" element={<PaginatedQueriesPage />} />
+
             <Route path="/rq-dependent" element={<DependentQueriesPage email="vishwas@example.com" />} />
 
             <Route path="/rq-dynamic-parallel" element={<DynamicParallelQueriesPage heroIds={[1, 3]} />} />

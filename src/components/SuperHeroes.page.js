@@ -31,7 +31,7 @@ const SuperHeroesPage = () => {
     <>
       <h2>Super Heroes Page</h2>
       {data.map((hero) => {
-        return <di0 key={hero.name}>{hero.name}</di0>;
+        return <div key={hero.name}>{hero.name}</div>;
       })}
     </>
   );
